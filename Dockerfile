@@ -8,7 +8,7 @@ ENV ANDROID_NDK_HOME /opt/android-ndk
 # Dependencies
 RUN apk update \
  && apk upgrade \
- && apk add gcompat bash
+ && apk add gcompat bash libgcc
 # Download, uncompress and finalize location
 RUN mkdir /opt/android-ndk-tmp && cd /opt/android-ndk-tmp \
  && wget -q https://dl.google.com/android/repository/android-ndk-${NDK_VERSION}-linux.zip \
